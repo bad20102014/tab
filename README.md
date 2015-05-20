@@ -11,7 +11,7 @@ tab({     <br/>
     activeTriggerClass: 'ui-tab-active',<br/>
    triggerType: 'hover'     <br/>
    })<br/>
-
+参数可选，不输入则使用默认值
 
 \<div class="newtab"><br/>
  \<span class="triggers">1\</span><br/>
