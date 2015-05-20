@@ -5,7 +5,7 @@
 		this.element = '.newtab';//默认父级DOM
 		this.triggers = '.triggers';//默认触发DOM
 		this.contents = '.contents';//默认内容DOM
-		this.activeTriggerClass="cur"//默认triggers被选中时的class
+		this.activeTriggerClass="ui-tab-active"//默认triggers被选中时的class
 		this.activeIndex=0;//初始化时，自动切换到指定面板，默认为0
 		this.triggerType="hover"; //触发类型
 		this.onSwitch=function (index, count) {}; //触发函数
