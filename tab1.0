@@ -8,18 +8,21 @@
 		this.activeTriggerClass="cur"//默认triggers被选中时的class
 		this.activeIndex=0;//初始化时，自动切换到指定面板，默认为0
 		this.triggerType="hover"; //触发类型
+		this.onSwitch=function (index, count) {}; //触发函数
 		this._init(args);//构造函数
 		var that=this;
 		var odiv=document.querySelector(".newtab");
 		var otabheader=odiv.querySelectorAll(".triggers");
 		var otabbody=odiv.querySelectorAll(".contents");
-		
-		for (var i = 0; i < otabheader.length; i++) {
+		var len_tri=otabheader.length;
+		for (var i = 0; i < len_tri; i++) {
 			otabheader[i].index=i;
 			if(this.triggerType==="hover")
 			{
 				otabheader[i].onmouseover=function(){
 					show(this.index);
+					
+					if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri)
 				}
 			}
 			if(this.triggerType==="click")
@@ -27,14 +30,18 @@
 				if(otabheader[i].addEventListener){
 					otabheader[i].addEventListener("click",function(){
 						show(this.index);
+						if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri)
 					})
 				}
 				if(otabheader[i].attachEvent){
 					otabheader[i].attachEvent("click",function(){
 						show(this.index);
+						if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri)
 					})
 				}
+				
 			}
+
 		};
 		var show=function(idx){
 				for (var j = 0; j < otabheader.length; j++) {
@@ -58,6 +65,7 @@
 			this.activeTriggerClass=obj.activeTriggerClass||this.activeTriggerClass;
 			this.activeIndex=obj.activeIndex||this.activeIndex;
 			this.triggerType=obj.triggerType||this.triggerType;
+			this.onSwitch=obj.onSwitch||null;
 			return;	
 		}
 		this.element=arguments[0]||this.element;
