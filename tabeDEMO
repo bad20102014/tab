@@ -1,0 +1,51 @@
+<html>
+<head>
+<style type="text/css">
+.triggers{
+	border: #ccc 1px solid;
+	width: 60px;
+	height: 25px;
+	float: left;
+	display: block;
+	margin-left: -1px;
+	background: -webkit-gradient(linear,left top,left bottom, from(#fefefe), to(#ededed));
+	text-align: center;
+	cursor: pointer;
+	line-height: 25px;
+}
+.newtab{
+	width: 183px;
+}
+.contents{
+float: left;
+width: 182px;
+height: 60px;
+margin-left: -1px;
+border: #ccc 1px solid;
+border-top: none;
+display: none;
+}
+
+.ui-tab-active{
+	border-bottom: none;
+background: #fff;
+}
+</style>	
+
+</head>
+<body>
+	<div class="newtab">
+    <span class="triggers cur">1</span>
+    <span class="triggers">2</span>
+    <span class="triggers">3</span>
+
+    <div class="contents" style="display:block">a</div>
+    <div class="contents">b</div>
+    <div class="contents">c</div>
+</div>
+<script src="https://github.com/bad20102014/tab/tab2.0.js"></script>
+<script>
+		tab();
+</script>
+</body>
+</html>
