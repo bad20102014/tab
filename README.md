@@ -12,17 +12,17 @@ tab({     <br/>
    triggerType: 'hover'     <br/>
    })<br/>
 
-··· HTML
-<div class="newtab"><br/>
-    <span class="triggers">1</span><br/>
-    <span class="triggers">2</span><br/>
-     <span class="triggers">3</span><br/>
 
-    <div class="contents">a</div><br/>
-   <div class="contents">b</div><br/>
-    <div class="contents">c</div><br/>
-</div>
-···
+\<div class="newtab"><br/>
+ \<span class="triggers">1\</span><br/>
+\<span class="triggers">2\</span><br/>
+\<span class="triggers">3\</span><br/>
+
+ \<div class="contents">a\</div><br/>
+ \<div class="contents">b\</div><br/>
+ \<div class="contents">c\</div><br/>
+\</div>
+
 
 参数<br/>
 element：父级DOM，默认为.newtab<br/>
