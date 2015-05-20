@@ -43,9 +43,14 @@ background: #fff;
     <div class="contents">b</div>
     <div class="contents">c</div>
 </div>
-<script src="https://github.com/bad20102014/tab/tab2.0.js"></script>
+<script src="tab2.0.js"></script>
 <script>
-		tab();
+	tab({
+    element: '.newtab',
+    triggers: '.triggers',
+    contents: '.contents',
+    activeTriggerClass: 'ui-tab-active'
+})
 </script>
 </body>
 </html>
