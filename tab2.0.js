@@ -22,8 +22,8 @@
 			{
 				otabheader[i].onmouseover=function(){
 					show(this.index);
-					
-					if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri)
+
+					if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri);
 				}
 			}
 			if(this.triggerType==="click")
@@ -31,13 +31,13 @@
 				if(otabheader[i].addEventListener){
 					otabheader[i].addEventListener("click",function(){
 						show(this.index);
-						if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri)
+						if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri);
 					})
 				}
 				if(otabheader[i].attachEvent){
 					otabheader[i].attachEvent("click",function(){
 						show(this.index);
-						if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri)
+						if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri);
 					})
 				}
 				
@@ -86,7 +86,7 @@
 	tab.prototype.removeclass=function(obj,cls){
 			if (this.haveclass(obj,cls)) {
 				var newclass=" "+obj.className+" ";
-				newclass=newclass.replace(" "+cls+" "," ")
+				newclass=newclass.replace(" "+cls+" "," ");
 				obj.className=newclass;
 			};
 
