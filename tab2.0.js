@@ -15,6 +15,7 @@
 		var otabheader=odiv.querySelectorAll(".triggers");
 		var otabbody=odiv.querySelectorAll(".contents");
 		var len_tri=otabheader.length;
+		if(!len_tri) return;
 		for (var i = 0; i < len_tri; i++) {
 			otabheader[i].index=i;
 			if(this.triggerType==="hover")
