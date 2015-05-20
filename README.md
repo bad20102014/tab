@@ -12,8 +12,8 @@ tab({     <br/>
    triggerType: 'hover'     <br/>
    onSwitch: function (index, count) {<br/>
         
-        index 是当前 trigger 的索引<br/>
-        count 是 trigger 的总数<br/>
+        index 是当前 trigger 的索引
+        count 是 trigger 的总数
         
     }
 
