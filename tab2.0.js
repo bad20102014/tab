@@ -35,7 +35,7 @@
 					})
 				}
 				if(otabheader[i].attachEvent){
-					otabheader[i].attachEvent("click",function(){
+					otabheader[i].attachEvent("onclick",function(){
 						show(this.index);
 						if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri);
 					})
