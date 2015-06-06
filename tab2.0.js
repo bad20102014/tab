@@ -6,7 +6,7 @@
 		this.triggers = '.triggers';//默认触发DOM
 		this.contents = '.contents';//默认内容DOM
 		this.activeTriggerClass="ui-tab-active"//默认triggers被选中时的class
-		this.activeIndex=0;//初始化时，自动切换到指定面板，默认为0
+		this.activeIndex=1;//初始化时，自动切换到指定面板，默认为1
 		this.triggerType="hover"; //触发类型
 		this.onSwitch=function (index, count) {}; //触发函数
 		this._init(args);//构造函数
@@ -17,13 +17,12 @@
 		var len_tri=otabheader.length;
 		if(!len_tri) return;
 		for (var i = 0; i < len_tri; i++) {
-			otabheader[i].index=i;
+			otabheader[i].index=i+1;
 			if(this.triggerType==="hover")
 			{
 				otabheader[i].onmouseover=function(){
 					show(this.index);
-
-					if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri);
+					if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri)
 				}
 			}
 			if(this.triggerType==="click")
@@ -31,13 +30,13 @@
 				if(otabheader[i].addEventListener){
 					otabheader[i].addEventListener("click",function(){
 						show(this.index);
-						if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri);
+						if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri)
 					})
 				}
 				if(otabheader[i].attachEvent){
 					otabheader[i].attachEvent("onclick",function(){
 						show(this.index);
-						if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri);
+						if(typeof that.onSwitch=="function") that.onSwitch(this.index,len_tri)
 					})
 				}
 				
@@ -49,8 +48,8 @@
 					that.removeclass(otabheader[j],that.activeTriggerClass);
 					otabbody[j].style.display="none";
 				};
-				that.addclass(otabheader[idx],that.activeTriggerClass);
-				otabbody[idx].style.display="block";
+				that.addclass(otabheader[idx-1],that.activeTriggerClass);
+				otabbody[idx-1].style.display="block";
 		}
 		show(this.activeIndex);
 	}
@@ -86,7 +85,7 @@
 	tab.prototype.removeclass=function(obj,cls){
 			if (this.haveclass(obj,cls)) {
 				var newclass=" "+obj.className+" ";
-				newclass=newclass.replace(" "+cls+" "," ");
+				newclass=newclass.replace(" "+cls+" "," ")
 				obj.className=newclass;
 			};
 
