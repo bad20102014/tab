@@ -43,14 +43,20 @@ background: #fff;
     <div class="contents">b</div>
     <div class="contents">c</div>
 </div>
-<script src="tab2.0.js"></script>
+<script src="tab.js"></script>
 <script>
-	tab({
-    element: '.newtab',
-    triggers: '.triggers',
-    contents: '.contents',
-    activeTriggerClass: 'ui-tab-active'
-})
+    tab({
+        element: '.newtab',
+        triggers: '.triggers',
+        contents: '.contents',
+        activeIndex: 1,
+        activeTriggerClass: 'ui-tab-active',
+        triggerType: 'hover',
+        onSwitch: function (index, count) {
+
+            alert(index);
+        }
+    })
 </script>
 </body>
 </html>
