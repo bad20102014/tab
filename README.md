@@ -6,10 +6,10 @@ tab(".newtab",".triggers",".contents")    输入父级DOM、触发DOM、内容DO
 tab({     <br/>
     element: '.newtab',<br/>
     triggers: '.triggers',<br/>
-    contents '.contents',<br/>
+    contents:'.contents',<br/>
     activeIndex: 1,<br/>
     activeTriggerClass: 'ui-tab-active',<br/>
-   triggerType: 'hover'     <br/>
+   triggerType: 'hover' ,    <br/>
    onSwitch: function (index, count) {<br/>
         
         index 是当前 trigger 的索引
