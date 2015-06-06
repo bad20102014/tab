@@ -7,7 +7,7 @@ tab({     <br/>
     element: '.newtab',<br/>
     triggers: '.triggers',<br/>
     contents '.contents',<br/>
-    activeIndex: 0,<br/>
+    activeIndex: 1,<br/>
     activeTriggerClass: 'ui-tab-active',<br/>
    triggerType: 'hover'     <br/>
    onSwitch: function (index, count) {<br/>
@@ -35,7 +35,7 @@ tab({     <br/>
 element：父级DOM，默认为.newtab<br/>
 triggers：触发DOM，默认为.triggers<br/>
 contents：内容DOM，默认为.contents<br/>
-activeIndex：指定面板，默认为0<br/>
+activeIndex：指定面板，默认为1<br/>
 activeTriggerClass：triggers被选中时的class,默认  ui-tab-active <br/>
 triggerType ：触发类型，默认为hover<br/>
 onSwitch: function (index, count){} 点击切换时触发的函数,默认无行为
