@@ -11,9 +11,9 @@
 		this.onSwitch=function (index, count) {}; //触发函数
 		this._init(args);//构造函数
 		var that=this;
-		var odiv=document.querySelector(".newtab");
-		var otabheader=odiv.querySelectorAll(".triggers");
-		var otabbody=odiv.querySelectorAll(".contents");
+		var odiv=document.querySelector(this.element);
+		var otabheader=odiv.querySelectorAll(this.triggers);
+		var otabbody=odiv.querySelectorAll(this.contents);
 		var len_tri=otabheader.length;
 		if(!len_tri) return;
 		for (var i = 0; i < len_tri; i++) {
