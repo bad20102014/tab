@@ -39,3 +39,4 @@ activeIndex：指定面板，默认为1<br/>
 activeTriggerClass：triggers被选中时的class,默认  ui-tab-active <br/>
 triggerType ：触发类型，默认为hover<br/>
 onSwitch: function (index, count){} 点击切换时触发的函数,默认无行为
+111
