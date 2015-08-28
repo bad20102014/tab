@@ -84,9 +84,10 @@
 		}
 	tab.prototype.removeclass=function(obj,cls){
 			if (this.haveclass(obj,cls)) {
-				var newclass=" "+obj.className+" ";
-				newclass=newclass.replace(" "+cls+" "," ")
+				var old=obj.className;
+				var regstr="\\s*"+cls;
+				var reg=new RegExp(regstr,"g");
+				var newclass=old.replace(reg,"");
 				obj.className=newclass;
 			};
-
 		}
